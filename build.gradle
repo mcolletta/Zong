@@ -1,3 +1,4 @@
+//apply plugin: 'java'
 defaultTasks 'build'
 
 allprojects {
@@ -14,6 +15,31 @@ allprojects {
 
 }
 
+task createSharedJar(dependsOn:[':tools:runFilesystemIndexCreator', ':tools:copyFile', ':tools:sharedJar']) {
+
+	def build_paths = []
+	subprojects.each() { subproject ->
+		build_paths << "${subproject.name}/build/libs/"
+	}
+	ant.with {
+	    echo("create libraries folder")
+		def destDir = "libraries"
+		if (!new File(destDir).exists())
+			mkdir(dir: destDir)
+		build_paths.each { path ->
+			if (path.startsWith("utils-"))
+				path = "utils/" + path
+			if (new File(path).exists()) {
+			    copy(todir: destDir) {
+			        fileset(dir: path) {
+			            include(name: "**/*.jar")
+			        }
+		    	}
+		    }
+	    }
+	    echo("done")
+	}
+}
 
 //TODO in subprojects:
 //additional configurations for compile classpaths (use as soon as Buildship (Gradle in Eclipse) supports it)

@@ -38,10 +38,17 @@ import com.xenoage.utils.lang.Lang;
 	@MaybeNull private Float volume;
 	/** The panning between -1 (left) and 1 (right), or null for default */
 	@MaybeNull private Float pan;
+	/** The MIDI program used for playback */
+	private int midiProgram = 0;
 
 	/** Default instrument: piano. */
 	public static final Instrument defaultInstrument = createDefaultInstrument();
 
+	public void setMidiProgram(int midiProgram) {
+		if (midiProgram < 0 || midiProgram > 128)
+			throw new IllegalArgumentException("MIDI program must be between 0 and 127");
+		this.midiProgram = midiProgram;
+	}
 	
 	public void setVolume(Float volume) {
 		if (volume != null && (volume < 0 || volume > 1))

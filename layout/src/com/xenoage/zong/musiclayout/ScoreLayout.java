@@ -20,6 +20,8 @@ import com.xenoage.zong.musiclayout.stampings.StaffStamping;
 import com.xenoage.zong.musiclayout.stampings.Stamping;
 import com.xenoage.zong.symbols.SymbolPool;
 
+import com.xenoage.utils.kernel.Tuple2;
+
 /**
  * A {@link ScoreLayout} stores the layout of a score,
  * distributed across a list of {@link ScoreFrameLayout}s.
@@ -123,15 +125,45 @@ public class ScoreLayout {
 	 * containing the measure with the given global index. If not found, -1 is returned.
 	 */
 	public int getSystemIndexOf(int frame, int measure) {
-		FrameSpacing frameArr = frames.get(frame).getFrameSpacing();
-		//go through all systems of this frame
-		for (int iSystem : range(frameArr.systems)) {
-			SystemSpacing system = frameArr.systems.get(iSystem);
-			if (system.containsMeasure(measure))
-				return iSystem;
+		if (frame >= 0 && frame < frames.size()) {
+			FrameSpacing frameArr = frames.get(frame).getFrameSpacing();
+			//go through all systems of this frame
+			for (int iSystem : range(frameArr.systems)) {
+				SystemSpacing system = frameArr.systems.get(iSystem);
+				if (system.containsMeasure(measure))
+					return iSystem;
+			}
 		}
 		//we found nothing
 		return -1;
+	}
+
+	/**
+   * Computes the index of the frame and the system (relative to the frame,
+   * thus beginning at 0 for each frame) containing the measure with the
+   * given index. If not found, null is returned.
+   */
+	public Tuple2<Integer, Integer> getFrameAndSystemIndex(int measure)
+	{
+		//go through all frames
+		for (int iFrame = 0; iFrame < frames.size(); iFrame++)
+		{
+		  FrameSpacing frameArr = frames.get(iFrame).getFrameSpacing();
+		  if (frameArr.getStartMeasureIndex() <= measure && frameArr.getEndMeasureIndex() >= measure)
+		  {
+		  	//go through all systems of this frame
+		  	for (int iSystem : range(frameArr.systems))
+		    {
+		      SystemSpacing system = frameArr.systems.get(iSystem);
+		      if (system.getStartMeasureIndex() <= measure && system.getEndMeasureIndex() >= measure)
+		      {
+		      	return new Tuple2<Integer, Integer>(iFrame, iSystem);
+		      }
+		    }
+		  }
+		}
+		//we found nothing. return null
+		return null;
 	}
 
 	/**

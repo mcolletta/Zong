@@ -6,6 +6,7 @@ import static com.xenoage.utils.collections.CollectionUtils.addOrNew;
 import static com.xenoage.utils.collections.CollectionUtils.alist;
 import static com.xenoage.utils.kernel.Range.range;
 import static com.xenoage.utils.math.Fraction._0;
+import static com.xenoage.utils.math.Fraction.fr;
 import static java.util.Collections.emptyList;
 
 import java.util.ArrayList;
@@ -172,9 +173,15 @@ public class Chord
 	 * Gets the displayed duration of this chord. For full chords, this method returns the
 	 * same value as {@link #getDuration()}. For grace notes, the value of
 	 * {@link Grace#getGraceDuration()} is returned.
+	 * For tuplet the value of the normal note is returned.
 	 */
 	public Fraction getDisplayedDuration() {
-		return (grace == null ? duration : grace.getGraceDuration());
+		Fraction displayed = (grace == null ? duration : grace.getGraceDuration());
+		if (tuplet != null) {
+			Fraction ratio = fr(tuplet.getActualNotes(), tuplet.getNormalNotes());
+			displayed = duration.mult(ratio);
+		}
+		return displayed;
 	}
 
 	/**

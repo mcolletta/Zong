@@ -17,8 +17,6 @@ import com.xenoage.zong.core.music.Pitch;
 public class PitchedInstrument
 	extends Instrument {
 
-	/** The MIDI program used for playback */
-	private int midiProgram = 0;
 	/** The transposition information */
 	@NonNull private Transpose transpose = Transpose.noTranspose;
 	/** The bottommost playable note (in notation) */
@@ -32,10 +30,4 @@ public class PitchedInstrument
 		super(id);
 	}
 	
-	public void setMidiProgram(int midiProgram) {
-		if (midiProgram < 0 || midiProgram > 128)
-			throw new IllegalArgumentException("MIDI program must be between 0 and 127");
-		this.midiProgram = midiProgram;
-	}
-
 }

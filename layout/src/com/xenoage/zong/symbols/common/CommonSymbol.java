@@ -32,6 +32,7 @@ public enum CommonSymbol {
 	BracketBracketEnd("bracket-bracketend"),
 	ClefG("clef-g"),
 	ClefF("clef-f"),
+	ClefPercussion("clef-percussion-2"),
 	Digit0("digit-0"),
 	Digit1("digit-1"),
 	Digit2("digit-2"),
@@ -162,6 +163,8 @@ public enum CommonSymbol {
 				return CommonSymbol.ClefF;
 			case G:
 				return CommonSymbol.ClefG;
+			case PercTwoRects:
+				return CommonSymbol.ClefPercussion;
 			default:
 				return CommonSymbol.ClefG; //TODO: add more clefs
 		}

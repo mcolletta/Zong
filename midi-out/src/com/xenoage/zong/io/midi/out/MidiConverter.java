@@ -21,6 +21,7 @@ import com.xenoage.utils.math.Fraction;
 import com.xenoage.zong.core.Score;
 import com.xenoage.zong.core.instrument.Instrument;
 import com.xenoage.zong.core.instrument.PitchedInstrument;
+import com.xenoage.zong.core.music.InstrumentChange;
 import com.xenoage.zong.core.music.Measure;
 import com.xenoage.zong.core.music.Part;
 import com.xenoage.zong.core.music.Staff;
@@ -29,8 +30,22 @@ import com.xenoage.zong.core.music.VoiceElement;
 import com.xenoage.zong.core.music.chord.Chord;
 import com.xenoage.zong.core.music.chord.Note;
 import com.xenoage.zong.core.music.time.Time;
+import com.xenoage.zong.core.music.util.BeatE;
+import com.xenoage.zong.core.music.util.BeatEList;
 import com.xenoage.zong.core.position.MP;
 import com.xenoage.zong.io.midi.out.Playlist.PlayRange;
+
+import com.xenoage.zong.core.music.tuplet.Tuplet;
+import com.xenoage.zong.core.music.slur.Slur;
+import com.xenoage.zong.core.music.slur.SlurType;
+import com.xenoage.zong.core.music.slur.SlurWaypoint;
+import static com.xenoage.utils.math.Fraction._0;
+import static java.util.Collections.emptyList;
+
+
+
+
+
 
 /**
  * This class creates a {@link MidiSequence} from a given {@link Score}.
@@ -179,6 +194,18 @@ public class MidiConverter<T> {
 						transposing = t.chromatic;
 					} //*/
 
+					// Instrument changes
+					BeatEList<InstrumentChange> instrumentChanges = measure.getInstrumentChanges();
+					if (instrumentChanges != null && instrumentChanges.getElements() != null) {
+						for (BeatE<InstrumentChange> instrumentChange : instrumentChanges.getElements()) {
+							Instrument pitchedInstrument = instrumentChange.element.getInstrument();
+							Fraction beatInMeasure = instrumentChange.beat;
+							long programChangeTick = currenttickinstaff + calculateTickFromFraction(beatInMeasure, resolution);
+							writer.writeProgramChange(systemTrackIndex, channel, programChangeTick, (pitchedInstrument).getMidiProgram());
+						}
+					}
+					//--------------------
+
 					Fraction start, end;
 					start = score.clipToMeasure(iMeasure, playRange.from).beat;
 					end = score.clipToMeasure(iMeasure, playRange.to).beat;
@@ -229,9 +256,13 @@ public class MidiConverter<T> {
 		Staff staff, int track, int currentVelocity, int iVoice, Voice voice, Fraction start,
 		Fraction end, int transposing) {
 		long currenttickinvoice = currenttickinstaff;
+		Fraction beat = _0;
 		for (VoiceElement element : voice.getElements()) {
 			Fraction duration = element.getDuration();
-			Fraction elementBeat = voice.getBeat(element);
+
+			//Fraction elementBeat = voice.getBeat(element);
+			Fraction elementBeat = beat;
+			beat = elementBeat.add(duration); // update beat before a possible jump(continue) in the loop
 			if (!isInRange(elementBeat, duration, start, end))
 				continue;
 			Fraction startBeat = elementBeat;
@@ -249,11 +280,29 @@ public class MidiConverter<T> {
 
 			if (starttick != stoptick && element instanceof Chord) {
 				Chord chord = (Chord) element;
+				// Ties--------------------
+				boolean on = true;
+				boolean off = true;
+				ArrayList<Slur> ties = alist();
+				for (Slur slur : chord.getSlurs()) {
+					if (slur.getType() == SlurType.Tie)
+						ties.add(slur);
+				}
+				for (Slur tie : ties) {
+					SlurWaypoint swp = tie.getStart();
+					if (swp.getChord() == chord)  // same instance
+						off = false;
+					SlurWaypoint ewp = tie.getStop();
+					if (ewp.getChord() == chord)
+						on = false;
+				}
+				// ------------------------
 				for (Note note : chord.getNotes()) {
 					currentVelocity = addNoteToTrack(channel, staff, track, currentVelocity, iVoice,
-						starttick, stoptick, chord, note, transposing);
+						starttick, stoptick, chord, note, transposing, on, off);
 				}
 			}
+
 			//TODO Timidity doesn't like ithe following midi events
 			/*MetaMessage m = null;
 			if (musicelement instanceof Clef)
@@ -399,12 +448,20 @@ public class MidiConverter<T> {
 	 * Adds the given note to the given track.
 	 */
 	private int addNoteToTrack(int channel, Staff staff, int track, int currentVelocity,
-		int iVoice, long starttick, long endtick, Chord chord, Note note, int transposing) {
+		int iVoice, long starttick, long endtick, Chord chord, Note note, int transposing,
+		boolean on, boolean off) {
 		int[] velocityAtPosition = getVelocityAtPosition(staff, iVoice, getMP(chord),
 			currentVelocity, score);
 		int midiNote = MidiTools.getNoteNumberFromPitch(note.getPitch()) + transposing;
-		writer.writeNote(track, channel, starttick, midiNote, true, velocityAtPosition[0]);
-		writer.writeNote(track, channel, endtick, midiNote, false, 0);
+		int _channel = channel;
+		if (note.isUnpitched()) { // midiNote is unpitchedInstr 
+			midiNote = note.getInstrument().getMidiProgram();
+			_channel = channel10;
+		}
+		if (on)
+			writer.writeNote(track, _channel, starttick, midiNote, true, velocityAtPosition[0]);
+		if (off)
+			writer.writeNote(track, _channel, endtick, midiNote, false, 0);
 		currentVelocity = velocityAtPosition[1];
 		return currentVelocity;
 	}

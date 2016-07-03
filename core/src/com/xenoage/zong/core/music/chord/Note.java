@@ -7,6 +7,7 @@ import lombok.Data;
 import com.xenoage.utils.annotations.Const;
 import com.xenoage.utils.annotations.NonNull;
 import com.xenoage.zong.core.music.Pitch;
+import com.xenoage.zong.core.instrument.UnpitchedInstrument;
 
 
 /**
@@ -17,8 +18,9 @@ import com.xenoage.zong.core.music.Pitch;
  */
 @Const @Data public final class Note {
 
-	@NonNull private final Pitch pitch;
-
+	@NonNull private final Pitch pitch; // display-step and display-octave for percussion instrument
+	private boolean unpitched;
+	private UnpitchedInstrument instrument;
 
 	/**
 	 * Returns a list of {@link Note}s from the given {@link Pitch}es.

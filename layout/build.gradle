@@ -3,6 +3,8 @@ sourceCompatibility = 6
 
 dependencies {
 	compile project(':core')
+	compile project(':utils-jse')
+	compile project(':utils-pdlib')
 }
 
 sourceSets {

@@ -29,6 +29,15 @@ import com.xenoage.zong.musiclayout.settings.LayoutSettings;
 import com.xenoage.zong.symbols.SymbolPool;
 import com.xenoage.zong.util.event.ScoreChangedEvent;
 
+//-----------------------------------------------------------
+import com.xenoage.zong.musiclayout.ScoreFrameLayout;
+import java.util.HashMap;
+import com.xenoage.utils.kernel.Tuple2;
+import com.xenoage.utils.pdlib.PMap;
+import static com.xenoage.utils.pdlib.PMap.pmap;
+import com.xenoage.utils.math.geom.Rectangle2f;
+//-----------------------------------------------------------
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
@@ -51,6 +60,17 @@ import lombok.Data;
 	/** The list of selected frames */
 	private ArrayList<Frame> selectedFrames;
 
+	//-----------------------------------------------------------
+	/** The chains of score frames */
+	public final PMap<Score, ScoreFrameChain> scoreFrameChains;
+	
+	/** The musical layouts */
+	public final PMap<ScoreFrameChain, ScoreLayout> scoreLayouts;
+
+	//cache of parent frames and pages for fast lookup
+	HashMap<Frame, Page> parentPages = null;
+	HashMap<Frame, GroupFrame> parentFrames = null;
+	//-----------------------------------------------------------
 
 	/**
 	 * Initializes an empty {@link Layout}.
@@ -59,6 +79,9 @@ import lombok.Data;
 		this.defaults = defaults;
 		this.pages = alist();
 		this.selectedFrames = alist();
+		//--------------------------------
+		this.scoreFrameChains = pmap();
+		this.scoreLayouts = pmap();
 	}
 
 	/**
@@ -111,13 +134,14 @@ import lombok.Data;
 	 * system (relative to the frame) in page coordinates together with the
 	 * index of the page. If not found, null is returned.
 	 */
-	/* TODO
+	// Experiment ---------------------------------------------------------------------
 	public Tuple2<Integer, Rectangle2f> getSystemBoundingRect(ScoreLayout scoreLayout,
 		int frameIndex, int systemIndex) {
 		
 		//find the frame
-		ScoreFrameChain chain = scoreLayouts.getKeyByValue(scoreLayout);
-		ScoreFrame scoreFrame = chain.frames.get(frameIndex);
+		//ScoreFrameChain chain = scoreLayouts.getKeyByValue(scoreLayout);
+		ScoreFrameChain chain = getScoreFrameChain(scoreLayout.score);
+		ScoreFrame scoreFrame = chain.getFrames().get(frameIndex);
 
 		//get system boundaries in mm
 		ScoreFrameLayout scoreFrameLayout = scoreLayout.frames.get(frameIndex);
@@ -130,10 +154,10 @@ import lombok.Data;
 		float y = rectMm.position.y - scoreFrame.getSize().height / 2;
 		float w = rectMm.size.width;
 		float h = rectMm.size.height;
-		Point2f nw = scoreFrame.computePagePosition(new Point2f(x, y), this);
-		Point2f ne = scoreFrame.computePagePosition(new Point2f(x + w, y), this);
-		Point2f se = scoreFrame.computePagePosition(new Point2f(x + w, y + h), this);
-		Point2f sw = scoreFrame.computePagePosition(new Point2f(x, y + h), this);
+		Point2f nw = scoreFrame.getPagePosition(new Point2f(x, y));
+		Point2f ne = scoreFrame.getPagePosition(new Point2f(x + w, y));
+		Point2f se = scoreFrame.getPagePosition(new Point2f(x + w, y + h));
+		Point2f sw = scoreFrame.getPagePosition(new Point2f(x, y + h));
 
 		// compute axis-aligned bounding box and return it
 		Rectangle2f ret = new Rectangle2f(nw.x, nw.y, 0, 0);
@@ -143,7 +167,67 @@ import lombok.Data;
 
 		int pageIndex = pages.indexOf(getPage(scoreFrame));
 		return new Tuple2<Integer, Rectangle2f>(pageIndex, ret);
-	} */
+	} 
+
+	/**
+	 * Gets the parent {@link GroupFrame} of the given frame, or null, if there is none.
+	 */
+	public GroupFrame getParentGroupFrame(Frame frame)
+	{
+		if (parentFrames == null)
+			updateCache();
+		return parentFrames.get(frame);
+	}
+	
+	
+	/**
+	 * Gets the parent {@link Page} of the given frame, or null, if it is not
+	 * part of this layout.
+	 */
+	public Page getPage(Frame frame)
+	{
+		if (parentPages == null)
+			updateCache();
+		Page page = parentPages.get(frame);
+		if (page != null)
+			return page;
+		GroupFrame parent = getParentGroupFrame(frame);
+		if (parent != null)
+			return getPage(parent);
+		return null;
+	}
+
+	void updateCache()
+	{
+		//parent pages and group frames
+		parentPages = new HashMap<Frame, Page>();
+		parentFrames = new HashMap<Frame, GroupFrame>();
+		for (Page page : pages)
+		{
+			for (Frame frame : page.getFrames())
+			{
+				parentPages.put(frame, page);
+				if (frame instanceof GroupFrame)
+				{
+					addGroupFrameToCache((GroupFrame) frame);
+				}
+			}
+		}
+	}
+	
+	private void addGroupFrameToCache(GroupFrame groupFrame)
+	{
+		for (Frame frame : groupFrame.children)
+		{
+			parentFrames.put(frame, groupFrame);
+			if (frame instanceof GroupFrame)
+			{
+				addGroupFrameToCache((GroupFrame) frame);
+			}
+		}
+	}
+
+	//---------------------------------------------------------------------------------------
 
 	/**
 	 * Gets the {@link ScoreFrame} which contains the given measure within

@@ -40,12 +40,15 @@ public final class Tuplet {
 	@Getter @Setter private List<Chord> chords;
 
 
-	public Tuplet(int actualNotes, int normalNotes, Fraction baseDuration) {
+	public Tuplet(int actualNotes, int normalNotes, Fraction baseDuration, 
+					boolean isBracketVisible, List<Chord> chords) {
 		if (chords.size() < 1)
 			throw new IllegalArgumentException("Tuplet must contain at least one chord");
 		this.actualNotes = actualNotes;
 		this.normalNotes = normalNotes;
 		this.baseDuration = baseDuration;
+		this.isBracketVisible = isBracketVisible;
+		this.chords = chords;
 	}
 
 
