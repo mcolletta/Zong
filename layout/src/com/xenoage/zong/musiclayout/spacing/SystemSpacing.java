@@ -170,12 +170,15 @@ public class SystemSpacing {
 		//find the measure
 		int measureIndex = getSystemMeasureIndexAt(xMm);
 		float xMmInMeasure = xMm - getMeasureStartMm(measureIndex);
+		// float xMmInMeasure = xMm - getMeasureStartMm(measureIndex) - columns.get(measureIndex).getLeadingWidthMm();
 		//when measure was not found, return null
 		if (measureIndex == unknown)
 			return unknownMp;
 		//get the beat at the given position
 		Fraction beat = columns.get(measureIndex).getBeatAt(xMmInMeasure, staff);
 		return atBeat(staff, measureIndex, unknown, beat);
+		// int systemMeasure = measureIndex + system.getStartMeasureIndex();
+		// return atBeat(staff, systemMeasure, unknown, beat);
 	}
 	
 	/**
@@ -185,7 +188,10 @@ public class SystemSpacing {
 	 */
 	public float getXMmAt(int scoreMeasure, Fraction beat) {
 		float measureXMm = getMeasureStartMm(scoreMeasure);
-		float elementXMm = columns.get(scoreMeasure - getStartMeasureIndex()).getXMmAt(beat);
+		// float elementXMm = columns.get(scoreMeasure - getStartMeasureIndex()).getXMmAt(beat);
+		int systemMeasure = scoreMeasure - getStartMeasureIndex();
+		ColumnSpacing colsp = columns.get(systemMeasure);
+		float elementXMm = colsp.getXMmAt(beat) + colsp.getLeadingWidthMm();
 		return measureXMm + elementXMm;
 	}
 	
