@@ -204,7 +204,7 @@ public class MidiScorePlayer
 			}
 			//if the program hung up but the player continued, there programm would always be to late.
 			//So the algorithm deletes all aruments before the current Element.
-			while (timePool.get(currentPosition + 1).tick <= currentTick)
+			while ((timePool.size() > (currentPosition+1)) && timePool.get(currentPosition + 1).tick <= currentTick)
 				currentPosition++;
 			MP pos = timePool.get(currentPosition).mp;
 			for (PlaybackListener listener : listeners.getAll()) {
