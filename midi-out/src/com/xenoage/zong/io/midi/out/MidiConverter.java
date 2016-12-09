@@ -486,8 +486,8 @@ public class MidiConverter<T> {
 				SortedList<Fraction> usedBeats = usedBeatsMeasures.get(i);
 
 				Fraction start, end;
-				start = score.clipToMeasure(playRange.from.measure, playRange.from).beat;
-				end = score.clipToMeasure(playRange.to.measure, playRange.to).beat;
+				start = score.clipToMeasure(i, playRange.from).beat;
+				end = score.clipToMeasure(i, playRange.to).beat;
 
 				for (Fraction fraction : usedBeats) {
 					//only add, if beats are between start and end
