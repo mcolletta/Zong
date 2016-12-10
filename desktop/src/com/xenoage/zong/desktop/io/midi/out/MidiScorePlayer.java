@@ -183,6 +183,30 @@ public class MidiScorePlayer
 			return 0;
 		}
 		else {
+			// needed for setMP in case of Repetitions
+			List<MidiTime> timePool = sequence.getTimePool();
+			MidiTime mtime = null;
+			for(MidiTime mt : timePool) {
+				if ((mt.mp.measure > pos.measure) ||
+					((mt.mp.measure == pos.measure) && (mt.mp.beat.compareTo(pos.beat) > -1))) {
+					mtime = mt;
+					break;
+				}
+			}
+			if (mtime != null) {
+				if (mtime.mp.measure > pos.measure) {
+					long diff = MidiConverter.calculateTickFromFraction(mtime.mp.beat, resolution);
+					return mtime.tick - diff;
+				} else { // same meaure
+					if (mtime.mp.beat.compareTo(pos.beat) == 0) {
+						return mtime.tick;
+					} else {
+						long diff = MidiConverter.calculateTickFromFraction(mtime.mp.beat.sub(pos.beat), resolution);
+						return mtime.tick - diff;
+					}
+				}
+			}
+			// ---------------------------------------
 			return measureTicks.get(pos.measure) +
 				MidiConverter.calculateTickFromFraction(pos.beat, resolution);
 		}
