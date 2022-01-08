@@ -107,7 +107,7 @@ public final class Cursor
 	 * Sets the position of the cursor. The {@link MP#element} field must be set.
 	 * @deprecated new naming: setMp
 	 */
-	public void setMP(MP mp) {
+	@Deprecated public void setMP(MP mp) {
 		setMp(mp);
 	}
 	
@@ -299,7 +299,7 @@ public final class Cursor
 	 * Closes a slur and adds it to the score.
 	 * @deprecated Does not work yet. Slur waypoints are not collected in this class.
 	 */
-	public void closeSlur() {
+	@Deprecated public void closeSlur() {
 		if (openSlurWaypoints == null)
 			throw new IllegalStateException("No curved line is open");
 		Slur slur = new Slur(openSlurType, openSlurWaypoints, null);

@@ -3,7 +3,8 @@ package com.xenoage.zong.core.music.group;
 import com.xenoage.utils.annotations.NonNull;
 
 import lombok.Data;
-
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 /**
  * Group of staves with a common bracket.
@@ -13,6 +14,8 @@ import lombok.Data;
  * 
  * @author Andreas Wenger
  */
+@NoArgsConstructor
+@AllArgsConstructor
 @Data public final class BracketGroup {
 
 	/** Visual styles of bracket grouping. */

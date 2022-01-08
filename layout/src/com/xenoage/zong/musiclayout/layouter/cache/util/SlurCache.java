@@ -1,6 +1,5 @@
 package com.xenoage.zong.musiclayout.layouter.cache.util;
 
-import javax.rmi.CORBA.Tie;
 
 import com.xenoage.utils.math.VSide;
 import com.xenoage.zong.core.music.slur.Slur;

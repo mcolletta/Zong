@@ -1,8 +1,9 @@
 apply plugin: 'java'
-sourceCompatibility = 6
 
 dependencies {
-	compile project(':core')
+	implementation project(':utils-base')
+	implementation project(':utils-kernel')
+	implementation project(':core')
 }
 
 sourceSets {

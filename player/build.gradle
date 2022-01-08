@@ -1,11 +1,26 @@
 apply plugin: 'java'
-sourceCompatibility = 8
 
 apply plugin: 'application'
 mainClassName = 'com.xenoage.zong.player.Player'
 
 dependencies {
-    compile project(':desktop')
+	implementation project(':core')
+	implementation project(':layout')
+	implementation project(':renderer')
+	implementation project(':renderer-javafx')
+	implementation project(':utils-base')
+	implementation project(':utils-kernel')
+	implementation project(':utils-jse')
+	implementation project(':utils-jse8')
+	implementation project(':renderer-awt'), project(':renderer-javafx'), project(':midi-out'), project(':musicxml-in'), project(':musicxml-layout')
+    implementation project(':desktop')
+    implementation 'org.controlsfx:controlsfx:8.40.10'
+	implementation 'com.itextpdf:itextpdf:5.5.7'
+    implementation name: 'javafx.base'
+    implementation name: 'javafx.controls'
+    implementation name: 'javafx.graphics'
+    implementation name: 'javafx.fxml'
+    implementation name: 'javafx.swing'
 }
 
 sourceSets {

@@ -116,7 +116,7 @@ public class ColumnSpacing {
 	 * 0 if not found. The index of the staff and voice must also be given.
 	 * @deprecated use {@link #getChord(Chord)}
 	 */
-	public float getOffsetIs(MusicElement element, int staffIndex, int voiceIndex) {
+	@Deprecated public float getOffsetIs(MusicElement element, int staffIndex, int voiceIndex) {
 		MeasureSpacing measure = measures.get(staffIndex);
 		for (ElementSpacing se : measure.voices.get(voiceIndex).elements) {
 			if (se.getElement() == element) {

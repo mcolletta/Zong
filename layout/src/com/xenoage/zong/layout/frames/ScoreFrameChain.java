@@ -25,6 +25,7 @@ import com.xenoage.zong.musiclayout.ScoreLayout;
 	/** The list of frames */
 	@Getter private ArrayList<ScoreFrame> frames = alist();
 	/** The score. */
+	@lombok.NonNull
 	@Getter @NonNull private Score score;
 	/** The score layouts in the frames. */
 	@Getter @Setter private ScoreLayout scoreLayout = null;

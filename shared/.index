@@ -2,363 +2,363 @@
 <index>
   <directory name="data">
     <directory name="lang">
-      <directory name="de">
-        <file name="editor.command.xml" size="1128"/>
-        <file name="id.xml" size="122"/>
-        <file name="layout.strategy.xml" size="836"/>
-        <file name="viewer.command.xml" size="1636"/>
-        <file name="flag16.png" size="545"/>
-        <file name="instruments.xml" size="2903"/>
-        <file name="de.po" size="12115"/>
-        <file name="viewer.key.xml" size="683"/>
-      </directory>
       <directory name="en">
-        <file name="editor.command.xml" size="1054"/>
-        <file name="id.xml" size="90"/>
-        <file name="layout.strategy.xml" size="850"/>
-        <file name="viewer.command.xml" size="1559"/>
-        <file name="flag16.png" size="699"/>
         <file name="instruments.xml" size="2900"/>
         <file name="viewer.key.xml" size="683"/>
+        <file name="flag16.png" size="699"/>
+        <file name="editor.command.xml" size="1054"/>
+        <file name="id.xml" size="90"/>
+        <file name="viewer.command.xml" size="1559"/>
+        <file name="layout.strategy.xml" size="850"/>
+      </directory>
+      <directory name="de">
+        <file name="instruments.xml" size="2903"/>
+        <file name="viewer.key.xml" size="683"/>
+        <file name="flag16.png" size="545"/>
+        <file name="de.po" size="12115"/>
+        <file name="editor.command.xml" size="1128"/>
+        <file name="id.xml" size="122"/>
+        <file name="viewer.command.xml" size="1636"/>
+        <file name="layout.strategy.xml" size="836"/>
       </directory>
     </directory>
     <directory name="demo">
       <directory name="scores">
-        <file name="BrahWiMeSample.mxl" size="5876"/>
-        <file name="BeetAnGeSample.xml" size="115750"/>
         <file name="SchbAvMaSample.xml" size="246333"/>
-      </directory>
-    </directory>
-    <directory name="symbols">
-      <directory name="default">
-        <file name="bracket-bracketend.svg" size="1031"/>
-        <file name="notehead-circlecross.svg" size="1307"/>
-        <file name="digit-4.svg" size="2035"/>
-        <file name="notehead-filledtriangle.svg" size="773"/>
-        <file name="notehead-quad.svg" size="574"/>
-        <file name="clef-f-8va.svg" size="3887"/>
-        <file name="rest-half.svg" size="878"/>
-        <file name="accordion-0-2-1.svg" size="1658"/>
-        <file name="articulation-upbow.svg" size="725"/>
-        <file name="articulation-accent.svg" size="1133"/>
-        <file name="time-allabreve.svg" size="1654"/>
-        <file name="digit-5.svg" size="2228"/>
-        <file name="clef-percussion-2.svg" size="1077"/>
-        <file name="symbol-fermata.svg" size="1755"/>
-        <file name="clef-percussion-2.svg.bad" size="726"/>
-        <file name="clef-g-8va.svg" size="5995"/>
-        <file name="text-note-quarter.svg" size="1367"/>
-        <file name="articulation-staccatissimo.svg" size="837"/>
-        <file name="notehead-breve.svg" size="1876"/>
-        <file name="articulation-flageolet.svg" size="763"/>
-        <file name="pedal-sustain-down-1.svg" size="3318"/>
-        <file name="clef-g-8vb.svg" size="6001"/>
-        <file name="ornament-pralltriller-mordent.svg" size="922"/>
-        <file name="note-whole.svg" size="1517"/>
-        <file name="symbol-segno.svg" size="2542"/>
-        <file name="bracket-brace.svg" size="2271"/>
-        <file name="time-common.svg" size="2517"/>
-        <file name="symbol-fermata-reversed.svg" size="1751"/>
-        <file name="ornament-pralltriller.svg" size="682"/>
-        <file name="test-staffheight-bottom.svg" size="888"/>
-        <file name="accordion-0-3-0.svg" size="1668"/>
-        <file name="accordion-0-3-1.svg" size="1827"/>
-        <file name="symbol-segno-bar2.svg" size="6079"/>
-        <file name="clef-f-8vb.svg" size="3950"/>
-        <file name="accordion-1-3-0.svg" size="1814"/>
-        <file name="symbol-repeatbar.svg" size="840"/>
-        <file name="accordion-1-0-0.svg" size="1304"/>
-        <file name="accordion-1-1-0.svg" size="1473"/>
-        <file name="dynamics-f.svg" size="1938"/>
-        <file name="accordion-1-1-1.svg" size="1632"/>
-        <file name="accidental-doubleflat.svg" size="3858"/>
-        <file name="rest-whole.svg" size="880"/>
-        <file name="clef-percussion-1.svg.bad" size="668"/>
-        <file name="notehead-filledquad.svg" size="518"/>
-        <file name="ornament-pralltriller-pralltriller.svg" size="754"/>
-        <file name="symbol-coda.svg" size="2676"/>
-        <file name="accordion-1-3-1.svg" size="1973"/>
-        <file name="digit-1.svg" size="1453"/>
-        <file name="notehead-diamond.svg" size="578"/>
-        <file name="accordion-0-2-0.svg" size="1499"/>
-        <file name="clef-g.svg" size="4759"/>
-        <file name="ornament-turn.svg" size="1529"/>
-        <file name="digit-0.svg" size="942"/>
-        <file name="dynamics-z.svg" size="1635"/>
-        <file name="dynamics-p.svg" size="2079"/>
-        <file name="accordion-1-2-0.svg" size="1645"/>
-        <file name="note-half.svg" size="1492"/>
-        <file name="accordion-0-1-1.svg" size="1486"/>
-        <file name="digit-3.svg" size="2508"/>
-        <file name="accordion-1-0-1.svg" size="1463"/>
-        <file name="notehead-cross.svg" size="650"/>
-        <file name="accordion-1-2-1.svg" size="1804"/>
-        <file name="clef-tab.svg" size="8609"/>
-        <file name="test-staffheight.svg" size="886"/>
-        <file name="symbol-segno-bar1.svg" size="5358"/>
-        <file name="pedal-sustain-down-2.svg" size="2015"/>
-        <file name="text-note-half.svg" size="2099"/>
-        <file name="clef-f.svg" size="2562"/>
-        <file name="accidental-natural.svg" size="1452"/>
-        <file name="articulation-fermata-short.svg" size="2531"/>
-        <file name="note-quarter.svg" size="978"/>
-        <file name="note-dot.svg" size="596"/>
-        <file name="rest-16th.svg" size="2378"/>
-        <file name="ornament-turn-inverted.svg" size="1529"/>
-        <file name="digit-6.svg" size="1493"/>
-        <file name="accidental-doublesharp.svg" size="3276"/>
-        <file name="pedal-sustain-up.svg" size="3381"/>
-        <file name="bracket-bracketline.svg" size="914"/>
-        <file name="notehead-longa.svg" size="764"/>
-        <file name="accordion-0-0-1.svg" size="1317"/>
-        <file name="rest-eighth.svg" size="1349"/>
-        <file name="rest-256th.svg" size="12257"/>
-        <file name="dynamics-m.svg" size="2293"/>
-        <file name="digit-9.svg" size="1964"/>
-        <file name="digit-2.svg" size="2043"/>
-        <file name="rest-64th.svg" size="7794"/>
-        <file name="rest-128th.svg" size="9628"/>
-        <file name="accidental-sharp.svg" size="2786"/>
-        <file name="rest-quarter.svg" size="2263"/>
-        <file name="rest-32th.svg" size="3325"/>
-        <file name="accidental-flat.svg" size="1547"/>
-        <file name="ornament-mordent.svg" size="826"/>
-        <file name="clef-c.svg" size="4759"/>
-        <file name="ornament-tr.svg" size="2297"/>
-        <file name="articulation-tenuto.svg" size="713"/>
-        <file name="articulation-fermata-long.svg" size="978"/>
-        <file name="articulation-staccato.svg" size="821"/>
-        <file name="notehead-filleddiamond.svg" size="519"/>
-        <file name="articulation-downbow.svg" size="759"/>
-        <file name="note-flag.svg" size="1162"/>
-        <file name="articulation-strongaccent.svg" size="1256"/>
-        <file name="dynamics-s.svg" size="1746"/>
-        <file name="notehead-triangle.svg" size="588"/>
-        <file name="digit-8.svg" size="2534"/>
-        <file name="accordion-0-1-0.svg" size="1327"/>
-        <file name="digit-7.svg" size="1487"/>
-      </directory>
-    </directory>
-    <directory name="test">
-      <directory name="scores">
-        <directory name="FileTypeReaderTest">
-          <file name="BrahWiMeSample.mxl" size="5876"/>
-          <file name="BeetAnGeSample.xml" size="115750"/>
-          <file name="copyright.txt" size="105"/>
-          <file name="SomeOpus.xml" size="431"/>
-        </directory>
-        <directory name="musicxml20">
-          <file name="readme.txt" size="627"/>
-          <file name="DebuMandSample.xml" size="109956"/>
-          <file name="BrahWiMeSample.mxl" size="5876"/>
-          <file name="BeetAnGeSample.xml" size="115750"/>
-          <file name="Telemann.xml" size="108628"/>
-          <file name="MahlFaGe4Sample.xml" size="129079"/>
-          <file name="Saltarello.xml" size="29233"/>
-          <file name="Binchois.xml" size="48739"/>
-          <file name="MozaVeilSample.xml" size="271174"/>
-          <file name="Dichterliebe01.xml" size="208011"/>
-          <file name=".gitignore" size="63"/>
-          <file name="MozartPianoSonata.xml" size="21442"/>
-          <file name="MozaChloSample.xml" size="221780"/>
-          <file name="BrahWiMeSample.xml" size="81648"/>
-          <file name="BrookeWestSample.xml" size="149308"/>
-          <file name="MozartTrio.xml" size="60829"/>
-          <file name="SchbAvMaSample.xml" size="246333"/>
-          <file name="Chant.xml" size="8436"/>
-          <file name="FaurReveSample.xml" size="144867"/>
-        </directory>
-        <directory name="MusicXML-TestSuite-0.1">
-          <file name="71d-ChordsFrets-Multistaff.xml" size="8828"/>
-          <file name="43a-PianoStaff.xml" size="1218"/>
-          <file name="51b-Header-Quotes.xml" size="1456"/>
-          <file name="46b-MidmeasureBarline.xml" size="2237"/>
-          <file name="32c-MultipleNotationChildren.xml" size="2653"/>
-          <file name="43d-MultiStaff-StaffChange.xml" size="7708"/>
-          <file name="41b-MultiParts-MoreThan10.xml" size="9241"/>
-          <file name="61e-Lyrics-Chords.xml" size="3277"/>
-          <file name="46a-Barlines.xml" size="4799"/>
-          <file name="71e-TabStaves.xml" size="38566"/>
-          <file name="11b-TimeSignatures-NoTime.xml" size="1223"/>
-          <file name="33c-Spanners-Slurs.xml" size="3975"/>
-          <file name="42b-MultiVoice-MidMeasureClefChange.xml" size="10026"/>
-          <file name="46d-PickupMeasure-ImplicitMeasures.xml" size="3503"/>
-          <file name="readme.txt" size="180"/>
-          <file name="02b-Rests-PitchedRests.xml" size="1980"/>
-          <file name="11c-TimeSignatures-CompoundSimple.xml" size="3445"/>
-          <file name="33i-Ties-NotEnded.xml" size="3596"/>
-          <file name="02e-Rests-NoType.xml" size="2476"/>
-          <file name="21f-Chord-ElementInBetween.xml" size="2630"/>
-          <file name="99b-Lyrics-BeamsMelismata-IgnoreBeams.xml" size="8773"/>
-          <file name="46f-IncompleteMeasures.xml" size="4513"/>
-          <file name="22d-Parenthesized-Noteheads.xml" size="3761"/>
-          <file name="41g-PartNoId.xml" size="828"/>
-          <file name="23b-Tuplets-Styles.xml" size="27996"/>
-          <file name="24f-GraceNote-Slur.xml" size="1945"/>
-          <file name="01b-Pitches-Intervals.xml" size="22615"/>
-          <file name="03b-Rhythm-Backup.xml" size="1936"/>
-          <file name="11h-TimeSignatures-SenzaMisura.xml" size="1834"/>
-          <file name="41f-StaffGroups-Overlapping.xml" size="5150"/>
-          <file name="33b-Spanners-Tie.xml" size="1234"/>
-          <file name="41i-PartNameDisplay-Override.xml" size="2682"/>
-          <file name="61d-Lyrics-Melisma.xml" size="4270"/>
-          <file name="03d-Rhythm-DottedDurations-Factors.xml" size="7786"/>
-          <file name="71c-ChordsFrets.xml" size="11207"/>
-          <file name="75a-AccordionRegistrations.xml" size="11105"/>
-          <file name="02c-Rests-MultiMeasureRests.xml" size="7882"/>
-          <file name="61f-Lyrics-GracedNotes.xml" size="5186"/>
-          <file name="13c-KeySignatures-NonTraditional.xml" size="2574"/>
-          <file name="72a-TransposingInstruments.xml" size="8185"/>
-          <file name="41c-StaffGroups.xml" size="41760"/>
-          <file name="03c-Rhythm-DivisionChange.xml" size="2888"/>
-          <file name="23e-Tuplets-Tremolo.xml" size="12907"/>
-          <file name="24a-GraceNotes.xml" size="7565"/>
-          <file name="41e-StaffGroups-InstrumentNames-Linebroken.xml" size="8135"/>
-          <file name="71a-Chordnames.xml" size="4660"/>
-          <file name="13d-KeySignatures-Microtones.xml" size="1863"/>
-          <file name="24e-GraceNote-StaffChange.xml" size="2122"/>
-          <file name="43c-MultiStaff-DifferentKeysAfterBackup.xml" size="1681"/>
-          <file name="71f-AllChordTypes.xml" size="16815"/>
-          <file name="21d-Chords-SchubertStabatMater.xml" size="4807"/>
-          <file name="46g-PickupMeasure-Chordnames-FiguredBass.xml" size="2719"/>
-          <file name="21e-Chords-PickupMeasures.xml" size="2885"/>
-          <file name="99a-Sibelius5-IgnoreBeaming.xml" size="6105"/>
-          <file name="74a-FiguredBass.xml" size="3478"/>
-          <file name="45b-RepeatWithAlternatives.xml" size="2771"/>
-          <file name="23d-Tuplets-Nested.xml" size="5540"/>
-          <file name="45e-Repeats-Nested-Alternatives.xml" size="4496"/>
-          <file name="41d-StaffGroups-Nested.xml" size="7862"/>
-          <file name="33d-Spanners-OctaveShifts.xml" size="4614"/>
-          <file name="45a-SimpleRepeat.xml" size="1639"/>
-          <file name="72b-TransposingInstruments-Full.xml" size="11911"/>
-          <file name="51c-MultipleRights.xml" size="1039"/>
-          <file name="03a-Rhythm-Durations.xml" size="8873"/>
-          <file name="22c-Noteheads-Chords.xml" size="4785"/>
-          <file name="23f-Tuplets-DurationButNoBracket.xml" size="6528"/>
-          <file name="11g-TimeSignatures-SingleNumber.xml" size="1920"/>
-          <file name="61b-MultipleLyrics.xml" size="4988"/>
-          <file name="52b-Breaks.xml" size="1831"/>
-          <file name="51d-EmptyTitle.xml" size="1250"/>
-          <file name="32d-Arpeggio.xml" size="6714"/>
-          <file name="61g-Lyrics-NameNumber.xml" size="3833"/>
-          <file name="52a-PageLayout.xml" size="3219"/>
-          <file name="43b-MultiStaff-DifferentKeys.xml" size="1491"/>
-          <file name="31c-MetronomeMarks.xml" size="5069"/>
-          <file name="33e-Spanners-OctaveShifts-InvalidSize.xml" size="2325"/>
-          <file name="32b-Articulations-Texts.xml" size="3160"/>
-          <file name="01a-Pitches-Pitches.xml" size="29060"/>
-          <file name="61c-Lyrics-Pianostaff.xml" size="4166"/>
-          <file name="32a-Notations.xml" size="34676"/>
-          <file name="45c-RepeatMultipleTimes.xml" size="3118"/>
-          <file name="61j-Lyrics-Elisions.xml" size="2805"/>
-          <file name="23a-Tuplets.xml" size="12668"/>
-          <file name="31a-Directions.xml" size="24055"/>
-          <file name="24d-AfterGrace.xml" size="2813"/>
-          <file name="21c-Chords-ThreeNotesDuration.xml" size="4297"/>
-          <file name="61h-Lyrics-BeamsMelismata.xml" size="8628"/>
-          <file name="71g-MultipleChordnames.xml" size="2581"/>
-          <file name="73a-Percussion.xml" size="5532"/>
-          <file name="11e-TimeSignatures-CompoundMixed.xml" size="3036"/>
-          <file name="46c-Midmeasure-Clef.xml" size="3653"/>
-          <file name="01f-Pitches-ParenthesizedMicrotoneAccidentals.xml" size="6235"/>
-          <file name="41h-TooManyParts.xml" size="1297"/>
-          <file name="02d-Rests-Multimeasure-TimeSignatures.xml" size="4126"/>
-          <file name="61a-Lyrics.xml" size="4402"/>
-          <file name="21b-Chords-TwoNotes.xml" size="3541"/>
-          <file name="12a-Clefs.xml" size="9068"/>
-          <file name="61k-Lyrics-SpannersExtenders.xml" size="4415"/>
-          <file name="11a-TimeSignatures.xml" size="5530"/>
-          <file name="33g-Slur-ChordedNotes.xml" size="3451"/>
-          <file name="45g-Repeats-NotEnded.xml" size="1836"/>
-          <file name="24c-GraceNote-MeasureEnd.xml" size="2203"/>
-          <file name="13a-KeySignatures.xml" size="17820"/>
-          <file name="43e-Multistaff-ClefDynamics.xml" size="8839"/>
-          <file name="22b-Staff-Notestyles.xml" size="4520"/>
-          <file name="45d-Repeats-Nested-Alternatives.xml" size="4642"/>
-          <file name="42a-MultiVoice-TwoVoicesOnStaff-Lyrics.xml" size="6975"/>
-          <file name="33a-Spanners.xml" size="23427"/>
-          <file name="12b-Clefs-NoKeyOrClef.xml" size="1130"/>
-          <file name="41a-MultiParts-Partorder.xml" size="3621"/>
-          <file name="01d-Pitches-Microtones.xml" size="3247"/>
-          <file name="46e-PickupMeasure-SecondVoiceStartsLater.xml" size="2882"/>
-          <file name="13b-KeySignatures-ChurchModes.xml" size="4517"/>
-          <file name="72c-TransposingInstruments-Change.xml" size="2824"/>
-          <file name="23c-Tuplet-Display-NonStandard.xml" size="18120"/>
-          <file name="22a-Noteheads.xml" size="36242"/>
-          <file name="33h-Spanners-Glissando.xml" size="8018"/>
-          <file name="24b-ChordAsGraceNote.xml" size="2789"/>
-          <file name="11f-TimeSignatures-SymbolMeaning.xml" size="2943"/>
-          <file name="01e-Pitches-ParenthesizedAccidentals.xml" size="6095"/>
-          <file name="90a-Compressed-MusicXML.mxl" size="28589"/>
-          <file name="02a-Rests-Durations.xml" size="4764"/>
-          <file name="11d-TimeSignatures-CompoundMultiple.xml" size="4022"/>
-          <file name="61i-Lyrics-Chords.xml" size="2135"/>
-          <file name="01c-Pitches-NoVoiceElement.xml" size="1366"/>
-          <file name="21a-Chord-Basic.xml" size="1207"/>
-          <file name="33f-Trill-EndingOnGraceNote.xml" size="3641"/>
-          <file name="14a-StaffDetails-LineChanges.xml" size="4246"/>
-          <file name="45f-Repeats-InvalidEndings.xml" size="2834"/>
-        </directory>
-        <directory name="MxlOpusFileInputTest">
-          <file name="DebuMandSample.xml" size="109956"/>
-          <file name="BrahWiMeSample.mxl" size="5876"/>
-          <file name="BeetAnGeSample.xml" size="115750"/>
-          <file name="SchbAvMaSample.xml" size="246333"/>
-          <file name="copyright.txt" size="145"/>
-          <file name="SomeOpus2.xml" size="249"/>
-          <file name="SomeOpus.xml" size="428"/>
-        </directory>
-        <directory name="test">
-          <file name="VoicesBeatOffsetterTest-4.xml" size="1215"/>
-          <file name="MultiStaffBeam.xml" size="5539"/>
-          <directory name="Grace Notes">
-            <file name="Grace Notes 1.pdf" size="3649"/>
-            <file name="Grace Notes 1.sib" size="30214"/>
-            <file name="Grace Notes 1.xml" size="10316"/>
-          </directory>
-          <file name="VoicesBeatOffsetterTest-2.xml" size="3108"/>
-          <file name="BeetAnGeSample-LyricTest.xml" size="115750"/>
-          <file name="0_2008_11_06.xml" size="79528"/>
-          <file name="Beamed16th.xml" size="1444"/>
-          <file name="InstrumentChanges.xml" size="14934"/>
-          <file name="0_2008_11_05.xml" size="79231"/>
-          <file name="0.xml" size="79097"/>
-          <file name="Tremolo1.xml" size="12849"/>
-          <file name="VoicesBeatOffsetterTest-1.xml" size="3145"/>
-          <file name="0_2008_11_05-2.xml" size="79701"/>
-          <file name="_.c-dotted.xml" size="815"/>
-          <file name="VoicesBeatOffsetterTest-3.xml" size="3850"/>
-          <file name="BeetAnGeSample-MeasureFullException.xml" size="116203"/>
-        </directory>
-        <directory name="MxlCompressedFileInputTest">
-          <file name="album.mxl" size="31506"/>
-        </directory>
-        <directory name="musicxml11">
-          <file name="readme.txt" size="627"/>
-          <file name="DebuMandSample.xml" size="109013"/>
-          <file name="BeetAnGeSample.xml" size="114629"/>
-          <file name="Telemann.xml" size="108628"/>
-          <file name="MahlFaGe4Sample.xml" size="128154"/>
-          <file name="Saltarello.xml" size="29233"/>
-          <file name="Binchois.xml" size="48739"/>
-          <file name="MozaVeilSample.xml" size="269228"/>
-          <file name="Dichterliebe01.xml" size="206932"/>
-          <file name=".gitignore" size="63"/>
-          <file name="MozartPianoSonata.xml" size="21442"/>
-          <file name="MozaChloSample.xml" size="219954"/>
-          <file name="BrahWiMeSample.xml" size="80839"/>
-          <file name="MozartTrio.xml" size="60829"/>
-          <file name="SchbAvMaSample.xml" size="245042"/>
-          <file name="Chant.xml" size="8436"/>
-          <file name="FaurReveSample.xml" size="143917"/>
-        </directory>
-      </directory>
-      <directory name="layout">
-        <file name="LayoutSettingsTest.xml" size="1047"/>
+        <file name="BeetAnGeSample.xml" size="115750"/>
+        <file name="BrahWiMeSample.mxl" size="5876"/>
       </directory>
     </directory>
     <directory name="layout">
       <file name="default.xml" size="1233"/>
+    </directory>
+    <directory name="symbols">
+      <directory name="default">
+        <file name="accordion-0-3-0.svg" size="1668"/>
+        <file name="clef-g.svg" size="4759"/>
+        <file name="dynamics-f.svg" size="1938"/>
+        <file name="accordion-0-2-0.svg" size="1499"/>
+        <file name="accordion-1-1-1.svg" size="1632"/>
+        <file name="rest-eighth.svg" size="1349"/>
+        <file name="ornament-pralltriller-mordent.svg" size="922"/>
+        <file name="note-whole.svg" size="1517"/>
+        <file name="note-flag.svg" size="1162"/>
+        <file name="note-half.svg" size="1492"/>
+        <file name="accordion-0-1-1.svg" size="1486"/>
+        <file name="note-dot.svg" size="596"/>
+        <file name="rest-128th.svg" size="9628"/>
+        <file name="rest-half.svg" size="878"/>
+        <file name="digit-8.svg" size="2534"/>
+        <file name="digit-3.svg" size="2508"/>
+        <file name="digit-0.svg" size="942"/>
+        <file name="articulation-flageolet.svg" size="763"/>
+        <file name="pedal-sustain-up.svg" size="3381"/>
+        <file name="time-allabreve.svg" size="1654"/>
+        <file name="articulation-downbow.svg" size="759"/>
+        <file name="dynamics-z.svg" size="1635"/>
+        <file name="rest-quarter.svg" size="2263"/>
+        <file name="pedal-sustain-down-2.svg" size="2015"/>
+        <file name="dynamics-s.svg" size="1746"/>
+        <file name="symbol-repeatbar.svg" size="840"/>
+        <file name="notehead-circlecross.svg" size="1307"/>
+        <file name="digit-1.svg" size="1453"/>
+        <file name="text-note-half.svg" size="2099"/>
+        <file name="symbol-segno-bar1.svg" size="5358"/>
+        <file name="accordion-1-2-1.svg" size="1804"/>
+        <file name="digit-6.svg" size="1493"/>
+        <file name="clef-f-8va.svg" size="3887"/>
+        <file name="accordion-1-1-0.svg" size="1473"/>
+        <file name="accidental-flat.svg" size="1547"/>
+        <file name="bracket-brace.svg" size="2271"/>
+        <file name="accidental-natural.svg" size="1452"/>
+        <file name="clef-f-8vb.svg" size="3950"/>
+        <file name="clef-g-8va.svg" size="5995"/>
+        <file name="notehead-cross.svg" size="650"/>
+        <file name="rest-32th.svg" size="3325"/>
+        <file name="time-common.svg" size="2517"/>
+        <file name="digit-7.svg" size="1487"/>
+        <file name="rest-256th.svg" size="12257"/>
+        <file name="clef-c.svg" size="4759"/>
+        <file name="accordion-0-0-1.svg" size="1317"/>
+        <file name="clef-percussion-2.svg.bad" size="726"/>
+        <file name="articulation-staccatissimo.svg" size="837"/>
+        <file name="accidental-doublesharp.svg" size="3276"/>
+        <file name="articulation-accent.svg" size="1133"/>
+        <file name="accidental-sharp.svg" size="2786"/>
+        <file name="articulation-staccato.svg" size="821"/>
+        <file name="pedal-sustain-down-1.svg" size="3318"/>
+        <file name="articulation-fermata-long.svg" size="978"/>
+        <file name="ornament-turn-inverted.svg" size="1529"/>
+        <file name="bracket-bracketend.svg" size="1031"/>
+        <file name="bracket-bracketline.svg" size="914"/>
+        <file name="note-quarter.svg" size="978"/>
+        <file name="digit-5.svg" size="2228"/>
+        <file name="symbol-segno.svg" size="2542"/>
+        <file name="notehead-filleddiamond.svg" size="519"/>
+        <file name="dynamics-m.svg" size="2293"/>
+        <file name="digit-2.svg" size="2043"/>
+        <file name="rest-16th.svg" size="2378"/>
+        <file name="notehead-diamond.svg" size="578"/>
+        <file name="notehead-filledquad.svg" size="518"/>
+        <file name="clef-g-8vb.svg" size="6001"/>
+        <file name="test-staffheight.svg" size="886"/>
+        <file name="accordion-1-2-0.svg" size="1645"/>
+        <file name="digit-9.svg" size="1964"/>
+        <file name="articulation-upbow.svg" size="725"/>
+        <file name="ornament-turn.svg" size="1529"/>
+        <file name="notehead-quad.svg" size="574"/>
+        <file name="symbol-fermata-reversed.svg" size="1751"/>
+        <file name="ornament-mordent.svg" size="826"/>
+        <file name="ornament-pralltriller-pralltriller.svg" size="754"/>
+        <file name="accordion-0-3-1.svg" size="1827"/>
+        <file name="symbol-segno-bar2.svg" size="6079"/>
+        <file name="notehead-triangle.svg" size="588"/>
+        <file name="text-note-quarter.svg" size="1367"/>
+        <file name="symbol-fermata.svg" size="1755"/>
+        <file name="ornament-tr.svg" size="2297"/>
+        <file name="rest-whole.svg" size="880"/>
+        <file name="notehead-breve.svg" size="1876"/>
+        <file name="articulation-strongaccent.svg" size="1256"/>
+        <file name="accordion-0-2-1.svg" size="1658"/>
+        <file name="clef-percussion-2.svg" size="1077"/>
+        <file name="articulation-tenuto.svg" size="713"/>
+        <file name="dynamics-p.svg" size="2079"/>
+        <file name="clef-f.svg" size="2562"/>
+        <file name="clef-tab.svg" size="8609"/>
+        <file name="accordion-1-0-0.svg" size="1304"/>
+        <file name="test-staffheight-bottom.svg" size="888"/>
+        <file name="notehead-longa.svg" size="764"/>
+        <file name="accordion-0-1-0.svg" size="1327"/>
+        <file name="notehead-filledtriangle.svg" size="773"/>
+        <file name="accidental-doubleflat.svg" size="3858"/>
+        <file name="articulation-fermata-short.svg" size="2531"/>
+        <file name="accordion-1-3-1.svg" size="1973"/>
+        <file name="clef-percussion-1.svg.bad" size="668"/>
+        <file name="ornament-pralltriller.svg" size="682"/>
+        <file name="rest-64th.svg" size="7794"/>
+        <file name="accordion-1-3-0.svg" size="1814"/>
+        <file name="accordion-1-0-1.svg" size="1463"/>
+        <file name="symbol-coda.svg" size="2676"/>
+        <file name="digit-4.svg" size="2035"/>
+      </directory>
+    </directory>
+    <directory name="test">
+      <directory name="layout">
+        <file name="LayoutSettingsTest.xml" size="1047"/>
+      </directory>
+      <directory name="scores">
+        <directory name="MxlOpusFileInputTest">
+          <file name="DebuMandSample.xml" size="109956"/>
+          <file name="SomeOpus2.xml" size="249"/>
+          <file name="SchbAvMaSample.xml" size="246333"/>
+          <file name="SomeOpus.xml" size="428"/>
+          <file name="BeetAnGeSample.xml" size="115750"/>
+          <file name="BrahWiMeSample.mxl" size="5876"/>
+          <file name="copyright.txt" size="145"/>
+        </directory>
+        <directory name="musicxml11">
+          <file name="MozaChloSample.xml" size="219954"/>
+          <file name="DebuMandSample.xml" size="109013"/>
+          <file name="MozaVeilSample.xml" size="269228"/>
+          <file name="MozartPianoSonata.xml" size="21442"/>
+          <file name="FaurReveSample.xml" size="143917"/>
+          <file name="SchbAvMaSample.xml" size="245042"/>
+          <file name="Saltarello.xml" size="29233"/>
+          <file name="readme.txt" size="627"/>
+          <file name="MozartTrio.xml" size="60829"/>
+          <file name="BeetAnGeSample.xml" size="114629"/>
+          <file name=".gitignore" size="63"/>
+          <file name="MahlFaGe4Sample.xml" size="128154"/>
+          <file name="Telemann.xml" size="108628"/>
+          <file name="BrahWiMeSample.xml" size="80839"/>
+          <file name="Binchois.xml" size="48739"/>
+          <file name="Chant.xml" size="8436"/>
+          <file name="Dichterliebe01.xml" size="206932"/>
+        </directory>
+        <directory name="musicxml20">
+          <file name="MozaChloSample.xml" size="221780"/>
+          <file name="DebuMandSample.xml" size="109956"/>
+          <file name="MozaVeilSample.xml" size="271174"/>
+          <file name="MozartPianoSonata.xml" size="21442"/>
+          <file name="FaurReveSample.xml" size="144867"/>
+          <file name="SchbAvMaSample.xml" size="246333"/>
+          <file name="Saltarello.xml" size="29233"/>
+          <file name="readme.txt" size="627"/>
+          <file name="MozartTrio.xml" size="60829"/>
+          <file name="BeetAnGeSample.xml" size="115750"/>
+          <file name="BrahWiMeSample.mxl" size="5876"/>
+          <file name=".gitignore" size="63"/>
+          <file name="BrookeWestSample.xml" size="149308"/>
+          <file name="MahlFaGe4Sample.xml" size="129079"/>
+          <file name="Telemann.xml" size="108628"/>
+          <file name="BrahWiMeSample.xml" size="81648"/>
+          <file name="Binchois.xml" size="48739"/>
+          <file name="Chant.xml" size="8436"/>
+          <file name="Dichterliebe01.xml" size="208011"/>
+        </directory>
+        <directory name="MxlCompressedFileInputTest">
+          <file name="album.mxl" size="31506"/>
+        </directory>
+        <directory name="MusicXML-TestSuite-0.1">
+          <file name="21b-Chords-TwoNotes.xml" size="3541"/>
+          <file name="11a-TimeSignatures.xml" size="5530"/>
+          <file name="41c-StaffGroups.xml" size="41760"/>
+          <file name="61g-Lyrics-NameNumber.xml" size="3833"/>
+          <file name="33a-Spanners.xml" size="23427"/>
+          <file name="71c-ChordsFrets.xml" size="11207"/>
+          <file name="61h-Lyrics-BeamsMelismata.xml" size="8628"/>
+          <file name="33i-Ties-NotEnded.xml" size="3596"/>
+          <file name="02d-Rests-Multimeasure-TimeSignatures.xml" size="4126"/>
+          <file name="45f-Repeats-InvalidEndings.xml" size="2834"/>
+          <file name="32a-Notations.xml" size="34676"/>
+          <file name="21f-Chord-ElementInBetween.xml" size="2630"/>
+          <file name="02a-Rests-Durations.xml" size="4764"/>
+          <file name="11b-TimeSignatures-NoTime.xml" size="1223"/>
+          <file name="14a-StaffDetails-LineChanges.xml" size="4246"/>
+          <file name="71a-Chordnames.xml" size="4660"/>
+          <file name="52a-PageLayout.xml" size="3219"/>
+          <file name="02e-Rests-NoType.xml" size="2476"/>
+          <file name="31c-MetronomeMarks.xml" size="5069"/>
+          <file name="22d-Parenthesized-Noteheads.xml" size="3761"/>
+          <file name="41g-PartNoId.xml" size="828"/>
+          <file name="43a-PianoStaff.xml" size="1218"/>
+          <file name="43d-MultiStaff-StaffChange.xml" size="7708"/>
+          <file name="23c-Tuplet-Display-NonStandard.xml" size="18120"/>
+          <file name="45a-SimpleRepeat.xml" size="1639"/>
+          <file name="33e-Spanners-OctaveShifts-InvalidSize.xml" size="2325"/>
+          <file name="01f-Pitches-ParenthesizedMicrotoneAccidentals.xml" size="6235"/>
+          <file name="13c-KeySignatures-NonTraditional.xml" size="2574"/>
+          <file name="51b-Header-Quotes.xml" size="1456"/>
+          <file name="21a-Chord-Basic.xml" size="1207"/>
+          <file name="02c-Rests-MultiMeasureRests.xml" size="7882"/>
+          <file name="03c-Rhythm-DivisionChange.xml" size="2888"/>
+          <file name="01b-Pitches-Intervals.xml" size="22615"/>
+          <file name="61b-MultipleLyrics.xml" size="4988"/>
+          <file name="61d-Lyrics-Melisma.xml" size="4270"/>
+          <file name="readme.txt" size="180"/>
+          <file name="23b-Tuplets-Styles.xml" size="27996"/>
+          <file name="11g-TimeSignatures-SingleNumber.xml" size="1920"/>
+          <file name="74a-FiguredBass.xml" size="3478"/>
+          <file name="42a-MultiVoice-TwoVoicesOnStaff-Lyrics.xml" size="6975"/>
+          <file name="33g-Slur-ChordedNotes.xml" size="3451"/>
+          <file name="99a-Sibelius5-IgnoreBeaming.xml" size="6105"/>
+          <file name="13a-KeySignatures.xml" size="17820"/>
+          <file name="73a-Percussion.xml" size="5532"/>
+          <file name="71g-MultipleChordnames.xml" size="2581"/>
+          <file name="90a-Compressed-MusicXML.mxl" size="28589"/>
+          <file name="61e-Lyrics-Chords.xml" size="3277"/>
+          <file name="13b-KeySignatures-ChurchModes.xml" size="4517"/>
+          <file name="45c-RepeatMultipleTimes.xml" size="3118"/>
+          <file name="24b-ChordAsGraceNote.xml" size="2789"/>
+          <file name="01d-Pitches-Microtones.xml" size="3247"/>
+          <file name="72a-TransposingInstruments.xml" size="8185"/>
+          <file name="02b-Rests-PitchedRests.xml" size="1980"/>
+          <file name="51c-MultipleRights.xml" size="1039"/>
+          <file name="33f-Trill-EndingOnGraceNote.xml" size="3641"/>
+          <file name="75a-AccordionRegistrations.xml" size="11105"/>
+          <file name="23e-Tuplets-Tremolo.xml" size="12907"/>
+          <file name="43e-Multistaff-ClefDynamics.xml" size="8839"/>
+          <file name="32d-Arpeggio.xml" size="6714"/>
+          <file name="03a-Rhythm-Durations.xml" size="8873"/>
+          <file name="71d-ChordsFrets-Multistaff.xml" size="8828"/>
+          <file name="46f-IncompleteMeasures.xml" size="4513"/>
+          <file name="61c-Lyrics-Pianostaff.xml" size="4166"/>
+          <file name="45g-Repeats-NotEnded.xml" size="1836"/>
+          <file name="23d-Tuplets-Nested.xml" size="5540"/>
+          <file name="41a-MultiParts-Partorder.xml" size="3621"/>
+          <file name="01a-Pitches-Pitches.xml" size="29060"/>
+          <file name="46e-PickupMeasure-SecondVoiceStartsLater.xml" size="2882"/>
+          <file name="33c-Spanners-Slurs.xml" size="3975"/>
+          <file name="46g-PickupMeasure-Chordnames-FiguredBass.xml" size="2719"/>
+          <file name="33b-Spanners-Tie.xml" size="1234"/>
+          <file name="22a-Noteheads.xml" size="36242"/>
+          <file name="41d-StaffGroups-Nested.xml" size="7862"/>
+          <file name="11f-TimeSignatures-SymbolMeaning.xml" size="2943"/>
+          <file name="71e-TabStaves.xml" size="38566"/>
+          <file name="12b-Clefs-NoKeyOrClef.xml" size="1130"/>
+          <file name="61j-Lyrics-Elisions.xml" size="2805"/>
+          <file name="72c-TransposingInstruments-Change.xml" size="2824"/>
+          <file name="61a-Lyrics.xml" size="4402"/>
+          <file name="31a-Directions.xml" size="24055"/>
+          <file name="11d-TimeSignatures-CompoundMultiple.xml" size="4022"/>
+          <file name="32b-Articulations-Texts.xml" size="3160"/>
+          <file name="41i-PartNameDisplay-Override.xml" size="2682"/>
+          <file name="13d-KeySignatures-Microtones.xml" size="1863"/>
+          <file name="11e-TimeSignatures-CompoundMixed.xml" size="3036"/>
+          <file name="72b-TransposingInstruments-Full.xml" size="11911"/>
+          <file name="99b-Lyrics-BeamsMelismata-IgnoreBeams.xml" size="8773"/>
+          <file name="11c-TimeSignatures-CompoundSimple.xml" size="3445"/>
+          <file name="01e-Pitches-ParenthesizedAccidentals.xml" size="6095"/>
+          <file name="45e-Repeats-Nested-Alternatives.xml" size="4496"/>
+          <file name="51d-EmptyTitle.xml" size="1250"/>
+          <file name="12a-Clefs.xml" size="9068"/>
+          <file name="41b-MultiParts-MoreThan10.xml" size="9241"/>
+          <file name="33h-Spanners-Glissando.xml" size="8018"/>
+          <file name="32c-MultipleNotationChildren.xml" size="2653"/>
+          <file name="21c-Chords-ThreeNotesDuration.xml" size="4297"/>
+          <file name="23f-Tuplets-DurationButNoBracket.xml" size="6528"/>
+          <file name="03b-Rhythm-Backup.xml" size="1936"/>
+          <file name="33d-Spanners-OctaveShifts.xml" size="4614"/>
+          <file name="45d-Repeats-Nested-Alternatives.xml" size="4642"/>
+          <file name="45b-RepeatWithAlternatives.xml" size="2771"/>
+          <file name="24f-GraceNote-Slur.xml" size="1945"/>
+          <file name="71f-AllChordTypes.xml" size="16815"/>
+          <file name="61k-Lyrics-SpannersExtenders.xml" size="4415"/>
+          <file name="41f-StaffGroups-Overlapping.xml" size="5150"/>
+          <file name="24a-GraceNotes.xml" size="7565"/>
+          <file name="24e-GraceNote-StaffChange.xml" size="2122"/>
+          <file name="01c-Pitches-NoVoiceElement.xml" size="1366"/>
+          <file name="46d-PickupMeasure-ImplicitMeasures.xml" size="3503"/>
+          <file name="41h-TooManyParts.xml" size="1297"/>
+          <file name="03d-Rhythm-DottedDurations-Factors.xml" size="7786"/>
+          <file name="52b-Breaks.xml" size="1831"/>
+          <file name="43b-MultiStaff-DifferentKeys.xml" size="1491"/>
+          <file name="61f-Lyrics-GracedNotes.xml" size="5186"/>
+          <file name="46a-Barlines.xml" size="4799"/>
+          <file name="24d-AfterGrace.xml" size="2813"/>
+          <file name="61i-Lyrics-Chords.xml" size="2135"/>
+          <file name="21e-Chords-PickupMeasures.xml" size="2885"/>
+          <file name="24c-GraceNote-MeasureEnd.xml" size="2203"/>
+          <file name="22b-Staff-Notestyles.xml" size="4520"/>
+          <file name="21d-Chords-SchubertStabatMater.xml" size="4807"/>
+          <file name="23a-Tuplets.xml" size="12668"/>
+          <file name="46b-MidmeasureBarline.xml" size="2237"/>
+          <file name="46c-Midmeasure-Clef.xml" size="3653"/>
+          <file name="41e-StaffGroups-InstrumentNames-Linebroken.xml" size="8135"/>
+          <file name="42b-MultiVoice-MidMeasureClefChange.xml" size="10026"/>
+          <file name="22c-Noteheads-Chords.xml" size="4785"/>
+          <file name="11h-TimeSignatures-SenzaMisura.xml" size="1834"/>
+          <file name="43c-MultiStaff-DifferentKeysAfterBackup.xml" size="1681"/>
+        </directory>
+        <directory name="FileTypeReaderTest">
+          <file name="SomeOpus.xml" size="431"/>
+          <file name="BeetAnGeSample.xml" size="115750"/>
+          <file name="BrahWiMeSample.mxl" size="5876"/>
+          <file name="copyright.txt" size="105"/>
+        </directory>
+        <directory name="test">
+          <file name="BeetAnGeSample-LyricTest.xml" size="115750"/>
+          <file name="Beamed16th.xml" size="1444"/>
+          <file name="0_2008_11_06.xml" size="79528"/>
+          <file name="Tremolo1.xml" size="12849"/>
+          <file name="MultiStaffBeam.xml" size="5539"/>
+          <file name="VoicesBeatOffsetterTest-3.xml" size="3850"/>
+          <file name="0_2008_11_05-2.xml" size="79701"/>
+          <directory name="Grace Notes">
+            <file name="Grace Notes 1.sib" size="30214"/>
+            <file name="Grace Notes 1.xml" size="10316"/>
+            <file name="Grace Notes 1.pdf" size="3649"/>
+          </directory>
+          <file name="0_2008_11_05.xml" size="79231"/>
+          <file name="_.c-dotted.xml" size="815"/>
+          <file name="VoicesBeatOffsetterTest-1.xml" size="3145"/>
+          <file name="VoicesBeatOffsetterTest-4.xml" size="1215"/>
+          <file name="BeetAnGeSample-MeasureFullException.xml" size="116203"/>
+          <file name="InstrumentChanges.xml" size="14934"/>
+          <file name="0.xml" size="79097"/>
+          <file name="VoicesBeatOffsetterTest-2.xml" size="3108"/>
+        </directory>
+      </directory>
     </directory>
   </directory>
 </index>

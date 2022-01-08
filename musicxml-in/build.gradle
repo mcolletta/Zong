@@ -1,8 +1,10 @@
 apply plugin: 'java'
-sourceCompatibility = 6
 
 dependencies {
-	compile project(':musicxml')
+	implementation project(':utils-base')
+	implementation project(':utils-kernel')
+	implementation project(':core')
+	implementation project(':musicxml')
 }
 
 sourceSets {

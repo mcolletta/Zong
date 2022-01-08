@@ -1,12 +1,12 @@
 apply plugin: 'java'
-sourceCompatibility = 8
 
 apply plugin: 'application'
 mainClassName = 'com.xenoage.zong.tools.index.FilesystemIndexCreator'
 
 dependencies {
-	compile project(':core')
-	compile project(':utils-jse')
+	implementation project(':utils-base')
+	implementation project(':utils-jse')
+	implementation project(':core')
 }
 
 sourceSets {
@@ -27,10 +27,12 @@ task sharedJar(type: Jar) {
     from '../shared'
 }
 
-task copyFile() << {
-	copy {
-            from '.index'
-            into '../shared'
-        }
+task copyFile() {
+	doLast {
+		copy {
+	            from '.index'
+	            into '../shared'
+	        }
+	    }
 }
 

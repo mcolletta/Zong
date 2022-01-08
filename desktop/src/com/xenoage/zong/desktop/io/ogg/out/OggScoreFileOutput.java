@@ -33,7 +33,7 @@ public class OggScoreFileOutput
 			WavScoreFileOutput.writeWav(score, tempStream);
 		}
 		//convert to ogg
-		VorbisEncoder.convert(tempFile.getAbsolutePath(), new JseOutputStream(stream));
+		//VorbisEncoder.convert(tempFile.getAbsolutePath(), new JseOutputStream(stream));
 		tempFile.delete();
 	}
 	

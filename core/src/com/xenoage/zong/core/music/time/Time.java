@@ -24,6 +24,7 @@ import com.xenoage.zong.core.position.MP;
 	public static final Time implicitSenzaMisura = new Time(TimeType.timeSenzaMisura);
 
 	/** The time signature type. */
+	@lombok.NonNull
 	@Getter @Setter @NonNull private TimeType type;
 
 	/** Back reference: the parent column header, or null, if not part of a score. */

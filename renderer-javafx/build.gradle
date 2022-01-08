@@ -1,9 +1,16 @@
 apply plugin: 'java'
-sourceCompatibility = 8
 
 dependencies {
-	compile project(':renderer')
-	compile project(':utils-jse8')
+	implementation project(':core')
+	implementation project(':utils-base')
+	implementation project(':utils-kernel')
+	implementation project(':layout')
+	implementation project(':renderer')
+	implementation project(':utils-jse8')
+
+	implementation name: 'javafx.base'
+    implementation name: 'javafx.controls'
+    implementation name: 'javafx.graphics'
 }
 
 sourceSets {

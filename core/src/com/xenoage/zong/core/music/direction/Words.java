@@ -21,6 +21,7 @@ public final class Words
 	implements TextElement {
 
 	/** The text. */
+	@lombok.NonNull
 	@NonNull private Text text;
 
 	@Override public MusicElementType getMusicElementType() {

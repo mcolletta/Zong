@@ -1,6 +1,8 @@
 package com.xenoage.zong.core.music.group;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
 import com.xenoage.utils.annotations.NonNull;
 
@@ -10,6 +12,8 @@ import com.xenoage.utils.annotations.NonNull;
  * 
  * @author Andreas Wenger
  */
+@NoArgsConstructor
+@AllArgsConstructor
 @Data public final class BarlineGroup {
 
 	/** Visual styles of barline grouping. */

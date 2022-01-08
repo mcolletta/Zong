@@ -21,6 +21,7 @@ public final class Clef
 {
 
 	/** The type of the clef. */
+	@lombok.NonNull
 	@NonNull private ClefType type;
 	
 	/** Back reference: the parent element, or null, if not part of a score. */

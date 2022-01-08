@@ -1,10 +1,11 @@
 apply plugin: 'java'
-sourceCompatibility = 6
 
 dependencies {
-	compile project(':core')
-	compile project(':utils-jse')
-	compile project(':utils-pdlib')
+	implementation project(':core')
+	implementation project(':utils-base')
+	implementation project(':utils-kernel')
+	implementation project(':utils-jse')
+	implementation project(':utils-pdlib')
 }
 
 sourceSets {

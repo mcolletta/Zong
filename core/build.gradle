@@ -1,9 +1,11 @@
 apply plugin: 'java'
-sourceCompatibility = 6
 
 dependencies {
-	compile project(':utils-base')
-	compile/*compileOnly - use as soon as Buildship (Gradle in Eclipse) supports it*/ 'org.projectlombok:lombok:1.16.6'
+	implementation project(':utils-base'), project(':utils-kernel')
+	compileOnly 'org.projectlombok:lombok:1.18.22'
+	annotationProcessor 'org.projectlombok:lombok:1.18.22'
+	testCompileOnly 'org.projectlombok:lombok:1.18.22'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
 }
 
 sourceSets {

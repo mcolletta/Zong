@@ -1,11 +1,24 @@
 apply plugin: 'java'
-sourceCompatibility = 8
 
 apply plugin: 'application'
 mainClassName = 'com.xenoage.zong.demos.Demos'
 
 dependencies {
-    compile project(':desktop')
+    implementation project(':core')
+    implementation project(':layout')
+    implementation project(':renderer')
+    implementation project(':renderer-javafx')
+    implementation project(':utils-base')
+    implementation project(':utils-kernel')
+    implementation project(':utils-jse')
+    implementation project(':utils-jse8')
+    implementation project(':renderer-awt'), project(':renderer-javafx'), project(':midi-out')
+    implementation project(':desktop')
+    implementation name: 'javafx.base'
+    implementation name: 'javafx.controls'
+    implementation name: 'javafx.graphics'
+    implementation name: 'javafx.fxml'
+    implementation name: 'javafx.swing'
 }
 
 sourceSets {
@@ -13,6 +26,29 @@ sourceSets {
 		java { srcDir 'src' }
 		resources { srcDir 'src' }
 	}
+}
+
+compileJava {
+    doFirst {
+        options.compilerArgs = [
+            '--module-path', "${System.getenv('JAVAFX_HOME')}/lib",
+            "--add-modules=javafx.graphics,javafx.fxml,javafx.swing",
+            "--add-exports", "javafx.graphics/com.sun.javafx.scene.layout=ALL-UNNAMED",
+            "--add-exports", "javafx.graphics/com.sun.javafx.util=ALL-UNNAMED",
+            "--add-exports", "javafx.graphics/com.sun.javafx.application=ALL-UNNAMED",
+            "--add-exports", "javafx.graphics/com.sun.javafx.tk=ALL-UNNAMED",
+            "--add-exports", "javafx.graphics/com.sun.javafx.scene.text=ALL-UNNAMED",
+            "--add-exports", "javafx.graphics/com.sun.javafx.scene.traversal=ALL-UNNAMED",
+            "--add-exports", "javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED",
+            "--add-exports", "javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED",
+            "--add-exports", "javafx.graphics/com.sun.javafx.geom=ALL-UNNAMED",
+            "--add-exports", "javafx.base/com.sun.javafx.event=ALL-UNNAMED",
+            "--add-exports", "javafx.base/com.sun.javafx.collections=ALL-UNNAMED",
+            "--add-exports", "javafx.base/com.sun.javafx=ALL-UNNAMED",
+            "--add-exports", "javafx.base/com.sun.javafx.logging=ALL-UNNAMED",
+        ]
+        //classpath = files()  
+    }
 }
 
 task runMinimalDemo(type: JavaExec) {
@@ -23,6 +59,23 @@ task runMinimalDemo(type: JavaExec) {
 
 task runSimpleGuiDemo(type: JavaExec) {
     classpath = sourceSets.main.runtimeClasspath
+    jvmArgs = [
+        '--module-path', "${System.getenv('JAVAFX_HOME')}/lib",
+        "--add-modules=javafx.graphics,javafx.fxml,javafx.swing",
+        "--add-exports", "javafx.graphics/com.sun.javafx.scene.layout=ALL-UNNAMED",
+        "--add-exports", "javafx.graphics/com.sun.javafx.util=ALL-UNNAMED",
+        "--add-exports", "javafx.graphics/com.sun.javafx.application=ALL-UNNAMED",
+        "--add-exports", "javafx.graphics/com.sun.javafx.tk=ALL-UNNAMED",
+        "--add-exports", "javafx.graphics/com.sun.javafx.scene.text=ALL-UNNAMED",
+        "--add-exports", "javafx.graphics/com.sun.javafx.scene.traversal=ALL-UNNAMED",
+        "--add-exports", "javafx.graphics/com.sun.javafx.scene=ALL-UNNAMED",
+        "--add-exports", "javafx.graphics/com.sun.javafx.stage=ALL-UNNAMED",
+        "--add-exports", "javafx.graphics/com.sun.javafx.geom=ALL-UNNAMED",
+        "--add-exports", "javafx.base/com.sun.javafx.event=ALL-UNNAMED",
+        "--add-exports", "javafx.base/com.sun.javafx.collections=ALL-UNNAMED",
+        "--add-exports", "javafx.base/com.sun.javafx=ALL-UNNAMED",
+        "--add-exports", "javafx.base/com.sun.javafx.logging=ALL-UNNAMED",
+    ]
     main = 'com.xenoage.zong.demos.Demos'
     args 'SimpleGuiDemo'
 }

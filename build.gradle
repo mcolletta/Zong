@@ -1,25 +1,50 @@
-//apply plugin: 'java'
+apply plugin: 'java'
+apply plugin: 'application'
 defaultTasks 'build'
+
 
 allprojects {
 
 	repositories {
 		mavenCentral()
-		maven { url "http://files.xenoage.com/maven2" }
+		//maven { url "http://files.xenoage.com/maven2" }
+		flatDir { dirs "${System.getenv('JAVAFX_HOME')}/lib" }
 	}
 
 	plugins.withType(JavaPlugin).whenPluginAdded {
+		compileJava {
+			doFirst {
+				options.compilerArgs = [
+					'--module-path', "${System.getenv('JAVAFX_HOME')}/lib",
+					"--add-modules=javafx.graphics,javafx.fxml,javafx.swing",
+					"--add-exports", "java.desktop/com.sun.media.sound=ALL-UNNAMED",
+				] 
+			}
+		}
 		compileJava.options.encoding = 'UTF-8'
 		compileTestJava.options.encoding = 'UTF-8'
 	}
 
 }
 
+
+subprojects {
+    afterEvaluate {
+    	dependencies {
+			compileOnly 'org.projectlombok:lombok:1.18.22'
+			annotationProcessor 'org.projectlombok:lombok:1.18.22'
+			testCompileOnly 'org.projectlombok:lombok:1.18.22'
+			testAnnotationProcessor 'org.projectlombok:lombok:1.18.22'
+		}
+	}
+}
+
 task createSharedJar(dependsOn:[':tools:runFilesystemIndexCreator', ':tools:copyFile', ':tools:sharedJar']) {
 
 	def build_paths = []
 	subprojects.each() { subproject ->
-		build_paths << "${subproject.name}/build/libs/"
+		if (!(subproject.name in ['demos', 'player']))
+			build_paths << "${subproject.name}/build/libs/"
 	}
 	ant.with {
 	    echo("create libraries folder")
@@ -40,6 +65,52 @@ task createSharedJar(dependsOn:[':tools:runFilesystemIndexCreator', ':tools:copy
 	    echo("done")
 	}
 }
+
+task fatJar(type: Jar) {
+  dependsOn clean
+  dependsOn build
+  dependsOn createSharedJar
+  duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+  manifest.from jar.manifest
+  baseName = 'zong'
+  classifier = 'all'
+  def destDir = "libraries"
+  def libsfolder = new File(destDir)
+  def jars = []
+  libsfolder.eachFile {jars << it}
+  println jars
+  from {
+	//libsfolder.eachFile.collect { it.isDirectory() ? it : zipTree(it) }
+	jars.collect { it.isDirectory() ? it : zipTree(it) }
+	//configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    //configurations.runtime.collect { it.isDirectory() ? it : zipTree(it) }
+
+  } {
+        exclude "META-INF/*.SF"
+        exclude "META-INF/*.DSA"
+        exclude "META-INF/*.RSA"
+		exclude "*.html"
+		exclude "*.git"
+  }
+  with jar
+}
+
+
+// def zongJars = ["layout.jar", "midi-out.jar", "utils-base.jar", "renderer-awt.jar", "utils-jse8.jar", "utils-kernel.jar", "musicxml-in.jar", "renderer-javafx.jar", "musicxml.jar", "utils-pdlib.jar", "renderer.jar", "zong-shared.jar", "core.jar", "musicxml-layout.jar", "utils-jse.jar", "desktop.jar", "converter.jar"]
+// task fatJarZong(type: Jar) {
+//   baseName = 'zong-all'
+//   from {
+// 	configurations.compile.each { println it.name }
+// 	configurations.compile.grep { it.name in zongJars }.collect { it.isDirectory() ? it : zipTree(it) }
+//     configurations.runtime.grep { it.name in zongJars }.collect { it.isDirectory() ? it : zipTree(it) }
+//   } {
+//         exclude "META-INF/*.SF"
+//         exclude "META-INF/*.DSA"
+//         exclude "META-INF/*.RSA"
+// 		exclude "*.git"
+//   }
+// }
+
 
 //TODO in subprojects:
 //additional configurations for compile classpaths (use as soon as Buildship (Gradle in Eclipse) supports it)
@@ -66,7 +137,7 @@ task distPlayer(type: Jar) {
 }
 
 //create JavaDoc using Ant task
-ant.importBuild 'javadoc.build.xml'
-task createDoc {
-	dependsOn antZongJavadoc
-}
+// ant.importBuild 'javadoc.build.xml'
+// task createDoc {
+// 	dependsOn antZongJavadoc
+// }
